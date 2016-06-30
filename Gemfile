@@ -45,3 +45,10 @@ group :development do
   gem 'spring'
 end
 
+gem 'bootstrap-sass'
+gem 'minitest-rails'
+
+
+group :test do
+  gem 'minitest-rails-capybara'
+end
