@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
 
   post "/" => "sessions#create", as: :create_sign_in
+  delete "/logout" => "sessions#delete", as: :sign_out
 
 
 

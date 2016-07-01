@@ -11,4 +11,12 @@ class SessionsController < ApplicationController
     end
   end
 
+
+  def delete
+
+    session[:username].destroy
+    redirect_to welcome_path, notice: "Come back to share your thoughts!"
+
+  end
+
 end

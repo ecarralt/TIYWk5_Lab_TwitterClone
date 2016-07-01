@@ -11,16 +11,23 @@
 
 <div class="row menubar">
 
-  <div class="col-xs-2 col-xs-offset-1">
+  <div class="col-xs-4">
     <div class="menulinks">
       <%= link_to "Home", home_path %>
       <%= link_to "New Thought", new_thought_path %>
     </div>
   </div>
 
-  <div class="col-xs-8">
+  <div class="col-xs-4">
     <div class="mainlogo">
-      <h2>Thinker</h2>
+      <h3>
+        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>
+      </h3>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="signout_link">
+      <%= link_to "Log out", home_path %>
     </div>
   </div>
 
@@ -31,6 +38,8 @@
     <% if notice %>
       <div class="alert alert-warning">  <%= notice %>  </p>
     <% end %>
+    </div>
+
   </div>
 
 </div>
