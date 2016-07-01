@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post 'registration' => "users#create", as: :create_user
 
 
+  post "/" => "sessions#create", as: :create_sign_in
+
+
 
 
 
