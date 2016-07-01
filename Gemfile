@@ -47,6 +47,7 @@ end
 
 gem 'bootstrap-sass'
 gem 'minitest-rails'
+gem 'bcrypt'
 
 
 group :test do

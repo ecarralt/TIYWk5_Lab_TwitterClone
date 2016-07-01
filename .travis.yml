@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.3.0
+addons:
+  postgresql: '9.4'
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.travis config/database.yml
+deploy:
+  provider: heroku
+  api_key:
+    secure: lrhdTrd9g5HywZ2G+8EYGJvND66T9tgM/klLfEp/DlWkfuvsDyHTFjzlkXrQJYuprBVCGL9ol3xk1H6PUgh4EctetHEteCVffrTc0GZTMHnywESvyWSVXWW6Zwe0bAPt2qE0m18XaozZUKvy0S0E/nLpl960bIP5WfTOks83ZaT4uajnfmQ7rBP6qaXL/jNueIMoraOMuCWXeyglj8W4La4WcZZOLPKGAd0R1mvz9OsHcRXGL8qQm0ZTYJGnM/LWnW7c7eNQCc3kYYygvxtNtZuezutIg1xcxuYPDTRrvdGACKGBIIacf0VvOikAjuNLrwQPF+fpy10J54Wvo23ttIpxiCK9QV/5qQ3o145s88W8i8GRZj+db1tpjCPGuLIOXKi/tV50uUJkPWcLgStcA5sfA8i+crC32FR9NW6rKZ/nzCkV6muF7c3iYjxObIp77igjURUwvSAxswRjVMxPLPmE7IJRUGaVluE0rAQCtauA76g33T2HptRZLdGhESR3Hx9RwfmxWCKMzABsmvY2tfp/qHo7xue60js2VyvirFXJyMm68L/EOIFaJqObNgpUGacH3lHwMf85vzWWvijA5yn+qlpTZ60LQIPyiNg+zB1p5tcmnTLevWSZj0QVqKc0WVVreoxIyjJJkoqvKj6Ftv0gbAsLHRIMTxS0QPuAhNA=
+  app: tiy-wk6-lab-twitter
+  on:
+    repo: ecarralt/TIYWk5_Lab_TwitterClone
+    branch: sign-up-functionality

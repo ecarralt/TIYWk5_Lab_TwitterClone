@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TwitterClone</title>
+  <title>Thinker_byECT</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+<div class="row menubar">
+
+  <div class="col-xs-2 col-xs-offset-1">
+    <div class="menulinks">
+      <%= link_to "Home", home_path %>
+      <%= link_to "New Thought", new_thought_path %>
+    </div>
+  </div>
+
+  <div class="col-xs-8">
+    <div class="mainlogo">
+      <h2>Thinker</h2>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <% if notice %>
+      <div class="alert alert-warning">  <%= notice %>  </p>
+    <% end %>
+  </div>
+
+</div>
 
 <%= yield %>
 
