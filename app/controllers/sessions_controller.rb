@@ -14,8 +14,8 @@ class SessionsController < ApplicationController
 
   def delete
 
-    session[:username].destroy
-    redirect_to welcome_path, notice: "Come back to share your thoughts!"
+    session.delete :username  # session[:username] = nil (should also work)
+    redirect_to welcome_path, notice: "Thanks! Come back later to share more thoughts!"
 
   end
 
