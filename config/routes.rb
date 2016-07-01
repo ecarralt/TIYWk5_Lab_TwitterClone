@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'thinker/newthought' => "thoughts#new", as: :new_thought
   post 'thinker/createthrought' => "thoughts#create", as: :create_thought
 
+  get 'registration' => "users#new", as: :new_user
   post 'registration' => "users#create", as: :create_user
 
 
