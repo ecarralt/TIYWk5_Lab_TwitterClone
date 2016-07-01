@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
     if @newuser.save
       session[:username] = @newuser.username
-      redirect_to home_path, notice: "Welcome to Thinker!"
+      redirect_to home_path, notice: "Start sharing your thoughts!"
     else
       redirect_to welcome_path, notice: "Please fill out your full name, username, and password"
     end

@@ -18,12 +18,23 @@ $cloud: #ecf0f1;
 
     .mainlogo{
 
-      h2{
+      h3 {
         margin-top: 0;
         margin-bottom: 0;
-        text-align: left;
-        color: black;
-        padding-left: 220px;
+
+
       }
+
+      span{
+        margin-top: 0;
+        margin-bottom: 0;
+        color: black;
+        padding-left: 160px;
+      }
+    }
+
+    .signout_link{
+      text-align: right;
+
     }
 }
