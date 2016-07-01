@@ -1,4 +1,19 @@
 Rails.application.routes.draw do
+
+  root 'welcome#thisisthinker'
+
+  get 'thinker/home' => 'thoughts#home', as: :home
+
+  get 'thinker/newthought' => "thoughts#new", as: :new_thought
+  post 'thinker/createthrought' => "thoughts#create", as: :create_thought
+
+  post 'registration' => "user#create", as: :create_user
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

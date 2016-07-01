@@ -1,0 +1,29 @@
+$mainblue: #2980b9;
+$cloud: #ecf0f1;
+
+.menubar{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 35px;
+  background-color: $cloud;
+
+  .menulinks{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+
+    .mainlogo{
+
+      h2{
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+        color: black;
+        padding-left: 220px;
+      }
+    }
+}
