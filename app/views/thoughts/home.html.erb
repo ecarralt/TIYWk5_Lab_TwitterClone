@@ -7,21 +7,54 @@
 
 
   <div class="col-xs-6">
-    <div class="form-group">
 
-      <%= form_for @thought, url: create_user_path do |f| %>
+    <div class="well home_thought_new">
+      <div class="form-group">
 
-        <div class="">
-          <%= f.text_area :body, class: "form-control", size:"10x2" %>
+        <%= form_for @thought, url: create_user_path do |f| %>
+
+          <div class="">
+            <%= f.text_area :body, class: "form-control", size:"10x2" %>
+            <%= f.submit "Submit"%>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+
+<% @thoughts.each do |thought| %>
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-4">
+    <div class="well home_thought">
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1">
+          <h5> <%= thought.user.full_name %> <small>@<%= thought.user.username %> &#149 <%= time_ago_in_words(thought.created_at) %> ago </small>
+          </h5>
         </div>
-
-        <div class="">
-        <%= f.submit "Submit"%>
+      </div>
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1">
+          <%= thought.body %>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-11 col-xs-offset-1">
+          <h3>
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+          </h3>
+        </div>
+      </div>
 
-      <% end %>
-
-    </div>  
+    </div>
   </div>
 
 </div>
+<% end %>
