@@ -2,7 +2,12 @@ class ThoughtsController < ApplicationController
 
   def home
     @thought = Thought.new
-    @thoughts = Thought.all
+
+    if @current_user
+      @thoughts = @current_user.timeline
+    else
+      @thoughts = Thought.all.order("created_at DESC")
+    end
 
   end
 

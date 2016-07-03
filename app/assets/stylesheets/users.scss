@@ -1,6 +1,7 @@
 .allthinkers_title{
   margin-left: 20px;
 
+
 }
 
 
@@ -11,5 +12,10 @@
       justify-content: flex-end;
       align-content: flex-end;
       align-items: center;
+
+      small{
+
+        margin-right: 10px;
+      }
 
 }

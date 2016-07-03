@@ -13,12 +13,18 @@
       <div type="button" class="list-group-item">
         <div class="row">
           <div class="col-xs-6">
-            <h5>@<%= user.username %></h5>
+            <h5>
+              @<%= user.username %>
+            </h5>
           </div>
           <div class="col-xs-6">
             <div class="allthinkers_links">
-              <%= link_to "Follow", follow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
-              <%= link_to "UnFollow", unfollow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
+              <% if @current_user.following?(user)%>
+                <small>following</small>
+                <%= link_to "UnFollow", unfollow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
+              <% else %>
+                <%= link_to "Follow", follow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
+              <% end %>
             </div>
           </div>
         </div>

@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   def index
 
-    @users = User.where("id != ? ", @current_user.id)
+    if @current_user
+      @users = User.where("id != ? ", @current_user.id)
+    else
+      @users = User.all
+    end
 
   end
 
@@ -22,8 +26,8 @@ class UsersController < ApplicationController
     puts @newuser.inspect
 
     if @newuser.save
-      session[:username] = @newuser.username
-      redirect_to home_path, notice: "Start sharing your thoughts!"
+      session[:user_id] = @newuser.id
+      redirect_to home_path, notice: "Welcome, #{@newuser.first_name}! Start sharing your thoughts and follow your favorite Thinkers!"
     else
       redirect_to welcome_path, notice: "Please fill out your full name, username, and password"
     end
@@ -31,9 +35,19 @@ class UsersController < ApplicationController
   end
 
   def follow
+    targetuser = User.find_by(id: params[:user_id])
+    @current_user.follow(targetuser)
+    redirect_to users_path, notice: "now following #{targetuser.username}"
   end
 
   def unfollow
+    targetuser = User.find_by(id: params[:user_id])
+    @current_user.stop_following(targetuser)
+    redirect_to users_path, notice: "not following #{targetuser.username} anymore"
   end
+
+  # def following
+  #   @followingusers = @current_user.following_users
+  # end
 
 end

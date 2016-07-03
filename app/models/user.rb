@@ -16,11 +16,11 @@ class User < ActiveRecord::Base
       name.join
     end
 
-    # def timeline
-    #   user_ids = self.following_users.pluck(:id)
-    #   user_ids.push(id)
-    #   Taco.where(user_id: user_ids).order("created_at DESC")
-    # end
+    def timeline
+      user_ids = self.following_users.pluck(:id)
+      user_ids.push(id)
+      Thought.where(user_id: user_ids).order("created_at DESC")
+    end
 
 
 end
