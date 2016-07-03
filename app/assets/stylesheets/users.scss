@@ -1,4 +1,15 @@
+.allthinkers_title{
+  margin-left: 20px;
+
+}
+
 
 .allthinkers_links{
-  align-items: right;
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-content: flex-end;
+      align-items: center;
+
 }
