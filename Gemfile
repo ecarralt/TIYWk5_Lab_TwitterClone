@@ -48,6 +48,7 @@ end
 gem 'bootstrap-sass'
 gem 'minitest-rails'
 gem 'bcrypt'
+gem "acts_as_follower"
 
 
 group :test do

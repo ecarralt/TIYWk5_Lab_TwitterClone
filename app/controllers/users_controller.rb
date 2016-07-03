@@ -1,5 +1,12 @@
 class UsersController < ApplicationController
 
+
+  def index
+
+    @users = User.all
+
+  end
+
   def new
     @user = User.new
   end
@@ -21,6 +28,12 @@ class UsersController < ApplicationController
       redirect_to welcome_path, notice: "Please fill out your full name, username, and password"
     end
 
+  end
+
+  def follow
+  end
+
+  def unfollow
   end
 
 end
