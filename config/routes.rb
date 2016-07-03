@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get 'thinker/home' => 'thoughts#home', as: :home
 
-  get 'thinker/newthought' => "thoughts#new", as: :new_thought
+  # get 'thinker/newthought' => "thoughts#new", as: :new_thought
   post 'thinker/createthrought' => "thoughts#create", as: :create_thought
 
   get 'registration' => "users#new", as: :new_user
