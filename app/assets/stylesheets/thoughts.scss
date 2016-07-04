@@ -1,61 +1,9 @@
 $mainblue: #2980b9;
-$cloud: #ecf0f1;
+$cloud: #ffffff;
 $thoughtorange: #ffeee6;
-$backgroundwhite: #f2f2f2;
+$backgroundwhite:  #ecf0f1; //#f0f0f5; //#e6f5ff; //#e6f2ff; //#f2f2f2;
 $orange: #ff9900;
 
-
-body{
-
-  background-color: $backgroundwhite;
-
-}
-
-
-
-
-.menubar{
-  padding-top: 2px;
-  padding-bottom: 2px;
-  line-height: 35px;
-  background-color: $cloud;
-
-  .menulinks{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-  }
-
-    .mainlogo{
-
-      h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-
-
-      }
-
-      span{
-        margin-top: 0;
-        margin-bottom: 0;
-        color: black;
-        padding-left: 160px;
-      }
-    }
-
-    .signout_link{
-      text-align: right;
-
-    }
-
-    .signin_link {
-      text-align: right;
-
-    }
-}
 
 
 .welcome_title {
@@ -64,8 +12,17 @@ body{
   small{
 
       color: lighten($orange, 10%)
-
   }
+}
+
+.sign_in_title{
+  margin-top: 70px;
+
+  small{
+
+      color: lighten($orange, 10%)
+  }
+
 }
 
 .sign_in_form {
@@ -79,9 +36,57 @@ body{
 
 }
 
+.sign_up_form{
+
+  margin-top: 25px;
+
+  .sign_up_buttons{
+    margin-top: 15px;
+
+  }
+
+}
+
+
+
 .homefeed {
 
   margin-top: 15px;
+
+  .user_miniprofile{
+
+      background-color: #ffffff;
+
+      h6 a {
+
+          color: black;
+
+          &:hover{
+
+            color: $orange;
+            text-decoration: none;
+          }
+
+      }
+
+      h4 {
+
+        color: $orange;
+
+        &:hover{
+
+          color: $orange;
+          text-decoration: none;
+
+        }
+      }
+
+      .name {
+          color: black;
+
+      }
+
+  }
 
   .home_thought_new{
 
@@ -90,12 +95,25 @@ body{
     padding-bottom: 0px;
 
     background-color: $thoughtorange;
+
+    textarea {
+      color: $orange;
+
+    }
+
+    .submitbtn{
+        margin-top: 5px;
+
+    }
   }
+
+
   .home_thought{
 
     margin-bottom: 0px;
     padding-top: 5px;
     padding-bottom: 0px;
+    background-color: #ffffff;
 
     &:hover{
 

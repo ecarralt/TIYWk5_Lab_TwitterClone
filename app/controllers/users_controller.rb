@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       session[:user_id] = @newuser.id
       redirect_to home_path, notice: "Welcome, #{@newuser.first_name}! Start sharing your thoughts and follow your favorite Thinkers!"
     else
-      redirect_to welcome_path, notice: "Please fill out your full name, username, and password"
+      redirect_to new_user_path, notice: "Please fill out your full name, username, and password"
     end
 
   end
