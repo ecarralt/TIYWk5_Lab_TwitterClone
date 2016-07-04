@@ -11,6 +11,8 @@ body{
 }
 
 
+
+
 .menubar{
   padding-top: 2px;
   padding-bottom: 2px;
@@ -52,6 +54,22 @@ body{
       text-align: right;
 
     }
+}
+
+
+.welcome_title {
+  margin-top: 100px;
+}
+
+.sign_in_form {
+  margin-top: 30px;
+
+  .sign_in_buttons {
+
+      margin-top: 15px;
+
+  }
+
 }
 
 .homefeed {
