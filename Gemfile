@@ -56,6 +56,11 @@ end
 
 group :production do
   # Use postgresql as the database for Active Record
-  gem 'pg', '~> 0.15'
+  gem 'pg'
   gem 'rails_12factor'
+end
+
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
