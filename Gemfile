@@ -54,3 +54,8 @@ gem "acts_as_follower"
 group :test do
   gem 'minitest-rails-capybara'
 end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
