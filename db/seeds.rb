@@ -1,3 +1,5 @@
+require 'faker'
+
 User.delete_all
 # User.create! username: "ecarralt", password: "12345678", first_name: "Enrique", last_name: "Carral", photo_tag: "ecarralt.jpg" , blurb: "This is where I put my thoughts"
 
@@ -23,6 +25,14 @@ user_info.each do |name|
 
 end
 
+5.times do |fakeuser|
+  fakeuser = User.create! username: Faker::Internet.user_name, password: "12345678", first_name: Faker::Name.first_name, last_name: Faker::Name.last_name
+  if fakeuser.id
+    puts "created user #{fakeuser.username}"
+  else
+    puts "did not create user desired"
+  end
+end
 
 
 Thought.delete_all
@@ -52,4 +62,13 @@ thought_bodies.each do |thoughtbody|
     puts "DID NOT CREATE thought: #{newthought}"
   end
 
+end
+
+5.times do |fakethought|
+  fakethought = Thought.create! user_id: User.all.sample.id, body: Faker::Lorem.paragraph
+  if fakethought.id
+    puts "created thought #{fakethought.id}"
+  else
+    puts "did not create thought desired"
+  end
 end
