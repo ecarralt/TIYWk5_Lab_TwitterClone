@@ -9,6 +9,8 @@ body{
   background-color: $backgroundwhite;
 
 }
+
+
 .menubar{
   padding-top: 2px;
   padding-bottom: 2px;
@@ -47,55 +49,57 @@ body{
     }
 
     .signin_link {
-      text-align: right; 
+      text-align: right;
 
     }
 }
 
+.homefeed {
 
-.home_thought_new{
+  margin-top: 15px;
 
-  margin-bottom: 0px;
-  padding-top: 5px;
-  padding-bottom: 0px;
+  .home_thought_new{
 
-  background-color: $thoughtorange;
-
-
-}
-.home_thought{
-
-  margin-bottom: 0px;
-  padding-top: 5px;
-  padding-bottom: 0px;
-
-  &:hover{
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px;
 
     background-color: $thoughtorange;
-
   }
+  .home_thought{
 
-  h5{
-    margin-bottom: 1px;
-
-  }
-
-  h3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-  }
-
-
-  span {
-
-    font-size: 15px;
+    margin-bottom: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px;
 
     &:hover{
 
-      color:  #ff0066;
+      background-color: $thoughtorange;
 
     }
-  }
 
+    h5{
+      margin-bottom: 1px;
+
+    }
+
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+    }
+
+
+    span {
+
+      font-size: 15px;
+
+      &:hover{
+
+        color:  #ff0066;
+
+      }
+    }
+
+  }
 }

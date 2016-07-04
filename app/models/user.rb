@@ -7,10 +7,19 @@ class User < ActiveRecord::Base
 
      has_many :thoughts
 
+     acts_as_follower
+     acts_as_followable
+
 
      def full_name
       name = [self.first_name," ", self.last_name]
       name.join
+    end
+
+    def timeline
+      user_ids = self.following_users.pluck(:id)
+      user_ids.push(id)
+      Thought.where(user_id: user_ids).order("created_at DESC")
     end
 
 

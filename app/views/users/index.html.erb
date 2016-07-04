@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-4">
+
+    <div class="row">
+      <div class="allthinkers_title">
+        <h3>All Thinkers <small>follow your favorites!</small></h3>
+      </div>
+    </div>
+
+    <div class="list-group">
+      <% @users.each do |user| %>
+      <div type="button" class="list-group-item">
+        <div class="row">
+          <div class="col-xs-6">
+            <h5>
+              @<%= user.username %>
+            </h5>
+          </div>
+          <div class="col-xs-6">
+            <div class="allthinkers_links">
+              <% if @current_user.following?(user)%>
+                <small>following</small>
+                <%= link_to "UnFollow", unfollow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
+              <% else %>
+                <%= link_to "Follow", follow_path(user_id: user.id), method: :post, class: "btn btn-default" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

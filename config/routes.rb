@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
   get 'registration' => "users#new", as: :new_user
   post 'registration' => "users#create", as: :create_user
+  get 'thinkers'=> "users#index", as: :users
 
+  post 'follow/:user_id' => 'users#follow', as: :follow
+  post 'unfollow/:user_id' => 'users#unfollow', as: :unfollow
 
   post "/" => "sessions#create", as: :create_sign_in
   get "/logout" => "sessions#delete", as: :sign_out

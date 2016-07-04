@@ -13,6 +13,7 @@ class UserCanSignInTest < Capybara::Rails::TestCase
     fill_in('Username', :with => "ecarralt")
     fill_in('Password', :with => "12345678")
     click_button "Sign In"
-    assert_content page, "Welcome to Thinker ecarralt"
+    assert_content page, "Welcome to Thinker @ecarralt"
   end
+
 end

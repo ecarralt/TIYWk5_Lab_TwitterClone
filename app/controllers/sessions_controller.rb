@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to home_path, notice: "Welcome to Thinker #{user.username}!"
+      redirect_to home_path, notice: "Welcome to Thinker @#{user.username}!"
     else
       redirect_to welcome_path, notice: "Something is wrong with your username and/or password. Please try again, you can do it!!"
     end
