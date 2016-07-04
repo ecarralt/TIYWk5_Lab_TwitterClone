@@ -2,3 +2,65 @@
 @import "bootstrap";
 @import "thoughts";
 @import "users";
+
+
+body{
+
+  background-color: $backgroundwhite;
+
+}
+
+
+.menubar{
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 35px;
+  background-color: $cloud;
+
+  .menulinks{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+      a, i {
+        color: $orange;
+      }
+  }
+
+    .mainlogo{
+
+      h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        span{
+
+          color: $orange;
+
+        }
+      }
+
+      span{
+        margin-top: 0;
+        margin-bottom: 0;
+        color: black;
+        padding-left: 160px;
+      }
+    }
+
+    .signout_link{
+      text-align: right;
+      a{
+        color: lighten($orange, 0%);
+
+      }
+
+    }
+
+    .signin_link {
+      text-align: right;
+
+    }
+}
