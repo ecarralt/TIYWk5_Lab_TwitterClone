@@ -7,7 +7,7 @@ class AddUsersBis < ActiveRecord::Migration
       t.string :username
       t.string "password_digest"
       t.string :blurb
-      t.string :photo_tag
+      t.string :photo_tag,  default:"http://www.resourcesgraphics.com/wp-content/uploads/2013/05/dark-side-profile-hooded-vector-avatar-.jpg"
       t.timestamps
     end
   end
