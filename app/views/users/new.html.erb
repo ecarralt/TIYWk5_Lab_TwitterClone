@@ -43,6 +43,10 @@
           <%= f.label :password_confirmation, "Re-type password" %>
           <%= f.password_field :password_confirmation,class: 'form-control'%>
         </div>
+        <div class="">
+          <%= f.label :photo_tag, "Photo URL: (if not available, we'll keep a cool avatar for you)" %>
+          <%= f.text_field :photo_tag,class: 'form-control'%>
+        </div>
 
         <div class="sign_up_buttons">
         <%= f.submit "Submit", class: "btn btn-warning"%>

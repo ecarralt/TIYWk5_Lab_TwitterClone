@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20160703164823) do
     t.string   "username"
     t.string   "password_digest"
     t.string   "blurb"
-    t.string   "photo_tag"
+    t.string   "photo_tag",       default: "http://www.resourcesgraphics.com/wp-content/uploads/2013/05/dark-side-profile-hooded-vector-avatar-.jpg"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
